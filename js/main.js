@@ -18,7 +18,12 @@ $(document).ready(function(){
   function getFilmsJSON(){
     $.ajax({
         method: 'GET',
-        url: 'http://destroyed.herokuapp.com/films'
+        url: 'http://destroyed.herokuapp.com/films',
+        headers: {
+          Origin: 'http://greggw.com/destroyed',
+          Access-Control-Request-Headers: 'Origin, Accept, Content-Type',
+          Access-Control-Request-Method: 'GET'
+        }
     })
     .done(function(response){
         $.each(response.films, function(){ addFilm(this); });
