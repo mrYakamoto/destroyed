@@ -24,6 +24,6 @@ $(document).ready(function(){
         $.each(response.films, function(){ addFilm(this); });
     })
     .error(function(xhr, unknown, error){
-        alert(error);
+        console.log(error);
     })
 }
