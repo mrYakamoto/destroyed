@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 function test(){
   $.ajax({
-    method: 'GET'
+    method: 'GET',
     url: 'http://destroyed.herokuapp.com/films'
   })
   .done(function(response){
