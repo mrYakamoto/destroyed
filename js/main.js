@@ -1,34 +1,49 @@
 $(document).ready(function(){
-      getFilmsJSON();
-      newTaskListener();
+  myNavBar.init(
+    [ "header", "header-container", "brand", "subtitle" ]
+    );
+  window.addEventListener( "scroll", function(e) {
+    offSetManager()
   })
-    function addFilm(film){
-      $('#films').append('<li>' + film.title + '</ul>');
+  $(".movie-title").fitText();
+
+});
+
+var myNavBar = {
+  flagAdd: true,
+  elements: [],
+
+  init: function (elements) {
+    this.elements = elements;
+  },
+
+  add : function() {
+    if(this.flagAdd) {
+      for(var i=0; i < this.elements.length; i++) {
+        document.getElementById(this.elements[i]).className += " fixed-theme";
+      }
+      this.flagAdd = false;
+    }
+  },
+
+  remove: function() {
+    for(var i=0; i < this.elements.length; i++) {
+      document.getElementById(this.elements[i]).className =
+      document.getElementById(this.elements[i]).className.replace( /(?:^|\s)fixed-theme(?!\S)/g , '' );
+    }
+    this.flagAdd = true;
   }
 
-  function newTaskListener(){
-      $('#new_film').submit(function(e){
-        e.preventDefault();
+};
 
-        $.post('http://destroyed.herokuapp.com/films', $(this).serialize(), addFilm);
-        this.reset();
-    })
+function offSetManager(){
+  var yOffset = 0;
+  var currYOffSet = window.pageYOffset;
+
+  if(yOffset < currYOffSet) {
+    myNavBar.add();
   }
-
-  function getFilmsJSON(){
-    $.ajax({
-        method: 'GET',
-        url: 'http://destroyed.herokuapp.com/films',
-        headers: {
-          Origin: 'http://greggw.com/destroyed',
-          Access-Control-Request-Headers: 'Origin, Accept, Content-Type',
-          Access-Control-Request-Method: 'GET'
-        }
-    })
-    .done(function(response){
-        $.each(response.films, function(){ addFilm(this); });
-    })
-    .error(function(xhr, unknown, error){
-        console.log(error);
-    })
+  else if(currYOffSet == yOffset){
+    myNavBar.remove();
+  }
 }

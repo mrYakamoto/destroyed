@@ -1,0 +1,118 @@
+body {
+  padding-top: 150px;
+  background-color: black;
+}
+
+footer { padding: 30px 0; }
+
+/* Navigation */
+*{transition: 0.8s;
+  -webkit-transition:  0.8s;}
+header.fixed-theme .navbar-fixed-top {
+  background-color: black;
+  padding: 0;
+}
+header.fixed-theme .navbar-brand {
+  height: 73px;
+}
+
+.navbar-brand {
+  font-size: 4em;
+}
+.navbar.navbar-fixed-top { padding: 20px 0 20px 0; }
+
+.navbar.navbar-fixed-top.fixed-theme {
+  background-color: #222;
+  border-color: #080808;
+  box-shadow: 0 0 5px rgba(0,0,0,.8);
+}
+
+.navbar-brand.fixed-theme { font-size: 18px; }
+
+.navbar-container.fixed-theme { padding: 0; }
+
+.navbar-brand.fixed-theme,
+.navbar-container.fixed-theme,
+.navbar.navbar-fixed-top.fixed-theme,
+.navbar-brand,
+.navbar-container{
+  transition: 0.8s;
+  -webkit-transition:  0.8s;
+}
+.navbar-nav { background-color: black; }
+span.icon-bar { background-color: black ; }
+span.icon-bar
+button.navbar-toggle.collapsed { border: 1px solid black; }
+
+.navbar-brand small {
+  display:block;
+  font-size:13px;
+  padding-left: 60px;
+  position: relative;
+  top: -8px;
+  font-family: 'Fjalla One',Helvetica,sans-serif;
+}
+
+.navbar-brand small.fixed-theme {
+  top: 0;
+}
+
+.nav-aside {
+  margin-top: 20px;
+  padding-top: 20px;
+  position: fixed;
+  padding-left: 50px;
+  color: white;
+}
+.nav-aside ul {
+  padding-top: 20px;
+  border-top: 1px solid white;
+}
+.nav-aside li a {
+  color: white;
+  padding-left: 10px;
+}
+.nav-aside li a:hover {
+  background-color: #999b9e;
+}
+
+
+
+/* Featured image and image containers */
+.image-container {
+  position: relative;
+}
+
+.movie-img {
+    width: 100%;
+  }
+.movie-img-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.movie-img-overlay .play-button {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+.movie-img-overlay:active .play-button {
+  color: black;
+}
+.movie-title {
+  opacity: 0;
+  color: white;
+}
+.movie-img-overlay:hover {
+  cursor: pointer;
+  background-color: rgba(255,0,0,0.15);
+}
+.movie-img-overlay:hover > .play-button {
+  opacity: 100;
+}
+.movie-img-overlay:hover > .movie-title {
+  opacity: 100;
+}
