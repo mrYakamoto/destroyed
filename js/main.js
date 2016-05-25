@@ -1,6 +1,6 @@
 $(document).ready(function(){
   myNavBar.init(
-    [ "header", "header-container", "brand", "subtitle" ]
+    [ "header", "header-container", "brand", "subtitle"]
     );
   window.addEventListener( "scroll", function(e) {
     offSetManager()
