@@ -2,28 +2,35 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>Destroyed</title>
+  <title>Destroyed</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-    <!-- Custom Fonts -->
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/main.css" type="text/css">
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+  <!-- Custom Fonts -->
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css" type="text/css">
 
 </head>
 
 <body>
-<!--header-->
+
+
+  <div id="trailer-container" class="trailer-container">
+    <i id="close-trailer-icon" class="fa fa-times fa-3x close-icon" aria-hidden="true"></i>
+    <iframe id="trailer-iframe" class="trailer col-xs-10 col-xs-offset-1" width="90%" height="90%" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <!--header-->
   <header id="header" class="container">
     <div class="row">
       <div id="header-container" class="col-lg-12">
@@ -45,13 +52,13 @@
         <li><a href="#">Featured</a></li>
         <li><a href="#">Coming Soon</a></li>
         <li><a href="#">Available</a></li>
-      &nbsp;
+        &nbsp;
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </div>
   </header>
-<!--sidebar navigation-->
+  <!--sidebar navigation-->
   <div class="container-fluid">
     <div class="row">
       <aside class="col-sm-3 nav-aside">
@@ -66,37 +73,75 @@
           </ul>
         </div>
       </aside>
-<!-- main content -->
-  <!-- featured movie -->
+      <!-- main content -->
+      <!-- featured movie -->
       <div class="main-content-container col-xs-12 col-sm-9 col-sm-offset-3">
-        <div class="main-hero">
-          <div class="image-container">
-            <img class="featured-hero movie-img" src="img/the-elephant-man-hero.jpg"/>
-            <div class="movie-img-overlay text-center">
-              <h2 class="movie-title">The Elephant Man</h2>
-              <i class="fa fa-play-circle play-button fa-5x" aria-hidden="true"></i>
-            </div>
+        <section id="featured-section">
+          <div class="featured-container">
+            <img class="featured-hero" src="img/the-elephant-man-hero.jpg"/>
+            <a class="trailer-link" id="elephant-man-trailer-link" href="#" data-trailer-url="https://www.youtube.com/embed/2ToC4vh_itg?rel=0">
+              <div class="movie-img-overlay text-center">
+                <h2 class="movie-title">The Elephant Man</h2>
+                <i class="fa fa-play-circle play-button fa-5x" aria-hidden="true"></i>
+              </div>
+            </a>
+          </div>
+        </section>
+        <!-- upcoming films -->
+        <section id="coming-soon-section">
+          <h2>Coming Soon</h2>
+          <div class="row">
+          <div class="image-container col-xs-6">
+              <img class="movie-img col-xs-12" src="img/light-between-oceans.jpg"/>
+
+              <a class="trailer-link" id="light-between-oceans-link" href="#" data-trailer-url="https://www.youtube.com/embed/w51IR_BFGyc">
+                <div class="movie-img-overlay text-center col-xs-12">
+                  <h2 class="movie-title">The Light Between Oceans</h2>
+                  <i class="fa fa-play-circle play-button fa-5x" aria-hidden="true"></i>
+                </div>
+              </a>
           </div>
         </div>
-  <!-- upcoming films -->
-        <section class="text-center">
-            <h1>Coming Soon</h1>
-            <h2>To upend your sense of meaning</h2>
+          <!-- <div class="image-container col-xs-6">
+            <img src="img/magnolia.jpg"/>
+          </div> -->
+
+        </section>
+
+        <section id="classic-section">
+          <h2>CLASSICS</h2>
+          <img class="col-xs-6" src="img/magnolia.jpg"/>
+          <img class="col-xs-6" src="img/45-years.jpg"/>
+
+          <div class="clearfix" style="margin-bottom:10px;"></div>
+
+          <img class="col-xs-6" src="img/tree-of-life.jpg"/>
+          <img class="col-xs-6" src="img/synecdoche-new-york.jpg"/>
+
+        </section>
+        <div class="clearfix"></div>
+        <section id="about-section">
+          <h2>ABOUT THIS SITE HERE</h2>
+          <h4>Before you can build the house back up, you have to burn it to the ground. This site is a resource for classic and upcoming films of devastating emotional heft. It's easy for our brains to trick us into thinking our problems are the most important things that've ever happened. In times like this, the power of film can serve as a powerful reminder that we're all but specs of dust in an eternal sea of mystery. Suddenly, our puny issues don't seem quite so bad.</h4>
+        </section>
+        <section id="contact-section">
+          <h2>CONTACT THIS SITE HERE</h2>
+          <h4>email / maybe a form for submitting comments and suggestions</h4>
         </section>
       </div>
     </div>
   </div>
   <div style="height:2000px;"></div>
 
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-<!-- Plugin JavaScript -->
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/jquery.fittext.js"></script>
-<!-- Custom JavaScript -->
-<script src="js/main.js"></script>
+  <!-- jQuery -->
+  <script src="js/jquery.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/jquery.fittext.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="js/main.js"></script>
 
 </body>
 

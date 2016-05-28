@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
   myNavBar.init(
     [ "header", "header-container", "brand", "subtitle"]
     );
@@ -7,7 +8,37 @@ $(document).ready(function(){
   })
   $(".movie-title").fitText();
 
+  initTrailers();
 });
+
+function initTrailers(){
+  openTrailerButtonListener();
+  closeTrailerButtonListener();
+};
+
+function openTrailerButtonListener(){
+  $('.trailer-link').click(function(e){
+    e.preventDefault();
+    var trailerUrl = $(this).attr('data-trailer-url');
+    populateTrailerWindow(trailerUrl);
+    $('#trailer-container').show();
+  })
+}
+function closeTrailerButtonListener(){
+  $('#close-trailer-icon').click(function(e){
+    e.preventDefault();
+    $('#trailer-container').hide();
+    emptyTrailerWindow();
+  })
+}
+
+function populateTrailerWindow(url){
+  $('#trailer-iframe').attr('src', url);
+}
+function emptyTrailerWindow(){
+  $('#trailer-iframe').attr('src', '');
+}
+
 
 var myNavBar = {
   flagAdd: true,
