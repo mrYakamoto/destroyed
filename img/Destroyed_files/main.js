@@ -1,15 +1,13 @@
 $(document).ready(function(){
 
-
   myNavBar.init(
     [ "header", "header-container", "brand", "subtitle"]
     );
-  window.onscroll = function(e) {
-    offSetManager();
-  }
-  offSetManager();
-
+  window.addEventListener( "scroll", function(e) {
+    offSetManager()
+  })
   $(".movie-title").fitText();
+
   initTrailers();
 });
 
@@ -19,7 +17,7 @@ function initTrailers(){
 };
 
 function openTrailerButtonListener(){
-  $('.overlay').click(function(e){
+  $('.trailer-link').click(function(e){
     e.preventDefault();
     var trailerUrl = $(this).attr('data-trailer-url');
     populateTrailerWindow(trailerUrl);
@@ -35,8 +33,6 @@ function closeTrailerButtonListener(){
 }
 
 function populateTrailerWindow(url){
-  if ( url.indexOf('?') > -1 ){ url += '&autoplay=1'; }
-  else { url += '?autoplay=1'; }
   $('#trailer-iframe').attr('src', url);
 }
 function emptyTrailerWindow(){

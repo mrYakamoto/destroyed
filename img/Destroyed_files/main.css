@@ -89,11 +89,14 @@ button.navbar-toggle.collapsed { border: 1px solid black; }
     content: "";
     display: block;
 }
-
+.movie-container :after {
+  clear:both;
+  content:"";
+  display:block;
+}
 .movie-title {
   position: relative;
   z-index:2;
-
 }
 
 .featured-hero {
@@ -106,20 +109,51 @@ button.navbar-toggle.collapsed { border: 1px solid black; }
   height: 100%;
 
 }
+.movie-img-overlay .play-button {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  color: red;
+}
+.movie-img-overlay:active .play-button {
+  color: black;
+}
+.movie-title {
+  opacity: 0;
+  color: white;
+}
+.movie-img-overlay:hover {
+  cursor: pointer;
+  background-color: rgba(255,0,0,0.15);
+}
+.movie-img-overlay:hover > .play-button {
+  opacity: 100;
+}
+.movie-img-overlay:hover > .movie-title {
+  opacity: 100;
+}
+
+.movie-img {
+  max-height: 240px;
+  max-width: 400px;
+}
+
 
 section h2,
 section h3 {
-  color: white;
+  color: yellow;
 }
 section h4 {
-  color: white;
+  color: red;
 }
+
 
 iframe.trailer {
   top: 50%;
   transform: translateY(-50%);
 }
-
 div.trailer-container {
   display: none;
   position: fixed;
@@ -129,7 +163,6 @@ div.trailer-container {
   top: 0;
   background-color: rgba(0,0,0,0.7);
 }
-
 .trailer-container .close-icon {
   position: absolute;
   top: 10px;
@@ -137,69 +170,3 @@ div.trailer-container {
   color: gray;
   cursor: pointer;
 }
-
-.movie-container {
-  width: 100%;
-  height: 100%;
-  float: left;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  background: #42b078;
-  margin-bottom: 15px;
-}
-.movie-container .overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-}
-.movie-container img {
-  display: block;
-  position: relative;
-  width: calc(100% + 20px);
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(-10px,0,0);
-  transform: translate3d(-10px,0,0);
-}
-.movie-container:hover {
-  cursor: pointer;
-}
-.movie-container:hover img {
-  opacity: 0.4;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-}
-.movie-container h2 {
-  text-transform: uppercase;
-  color: white;
-  text-align: center;
-  position: relative;
-  font-size: 17px;
-  overflow: hidden;
-}
-.movie-container i.play-button,
-.movie-container .movie-title {
-  opacity: 0;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-}
-.movie-container .movie-title {
-  color: white;
-}
-.movie-container i.play-button {
-  color: gray;
-  position: absolute;
-  left:50%;
-  top:50%;
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.movie-container:hover i.play-button,
-.movie-container:hover .movie-title {
-  opacity: 100;
-}
-
