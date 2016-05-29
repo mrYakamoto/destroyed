@@ -64,12 +64,22 @@
       <aside class="col-sm-3 nav-aside">
         <div class="collapse navbar-collapse" id="collapse">
           <ul class="nav nav-pills nav-stacked hidden-xs">
-            <li><a href="#">Featured</a></li>
-            <li><a href="#">Coming Soon</a></li>
-            <li><a href="#">Available</a></li>
+            <li>
+              <a href="#" class="nav-link" data-linked-item="#featured-section">Featured</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link" data-linked-item="#coming-soon-section">Coming Soon</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link" data-linked-item="#past-section">Past</a>
+            </li>
             &nbsp;
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li>
+              <a href="#" class="nav-link" data-linked-item="#about-section">About</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link" data-linked-item="#contact-section">Contact</a>
+            </li>
           </ul>
         </div>
       </aside>
@@ -78,6 +88,7 @@
       <div class="main-content-container col-xs-12 col-sm-9 col-sm-offset-3">
 
         <section id="featured-section">
+          <h2>Featured</h2>
           <div class="row">
             <div class="col-xs-12">
               <div class="movie-container">
@@ -106,24 +117,26 @@
             </div>
             <div class="col-xs-6">
               <div class="movie-container">
-                <img class="" src="img/light-between-oceans.jpg"/>
-                <div class="overlay" data-trailer-url="https://www.youtube.com/embed/w51IR_BFGyc">
-                  <h2 class="movie-title">The Light Between Oceans</h2>
+                <img class="" src="img/the-wailing.jpg"/>
+                <div class="overlay" data-trailer-url="https://www.youtube.com/embed/TVTbF379ORM">
+                  <h2 class="movie-title">The Wailing</h2>
                   <i class="fa fa-play-circle play-button fa-5x" aria-hidden="true"></i>
                 </div>
               </div>
             </div>
+
           </div>
+
         </section>
 
-        <section id="classic-section">
-          <h2>CLASSICS</h2>
+        <section id="past-section">
+          <h2>PAST</h2>
 
           <div class="row">
             <div class="col-xs-6">
               <div class="movie-container">
                 <img class="" src="img/magnolia.jpg"/>
-                <div class="overlay">
+                <div class="overlay" data-trailer-url="https://www.youtube.com/embed/cxcegktcxSM">
                   <h2 class="movie-title">Magnolia</h2>
                   <i class="fa fa-play-circle play-button fa-5x" aria-hidden="true"></i>
                 </div>
@@ -132,9 +145,53 @@
 
             <div class="col-xs-6">
               <div class="movie-container">
-                <img class="" src="img/magnolia.jpg"/>
-                <div class="overlay">
-                  <h2 class="movie-title">The Light Between Oceans</h2>
+                <img class="" src="img/beaches.jpg"/>
+                <div class="overlay" data-trailer-url="https://www.youtube.com/embed/G59ivoXtmW4">
+                  <h2 class="movie-title">Beaches</h2>
+                  <i class="fa fa-play-circle play-button fa-5x" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="movie-container">
+                <img class="" src="img/bicycle-thief2.jpg"/>
+                <div class="overlay" data-trailer-url="https://www.youtube.com/embed/oqib1EaY5G8">
+                  <h2 class="movie-title">Bicycle Thief</h2>
+                  <i class="fa fa-play-circle play-button fa-5x" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-6">
+              <div class="movie-container">
+                <img class="" src="img/dancer-in-the-dark.jpg"/>
+                <div class="overlay" data-trailer-url="https://www.youtube.com/embed/53vr9EiOH7g">
+                  <h2 class="movie-title">Dancer in the Dark</h2>
+                  <i class="fa fa-play-circle play-button fa-5x" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="movie-container">
+                <img class="" src="img/mask.jpg"/>
+                <div class="overlay" data-trailer-url="https://www.youtube.com/embed/DkJs6Y1QJrE">
+                  <h2 class="movie-title">Mask</h2>
+                  <i class="fa fa-play-circle play-button fa-5x" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-6">
+              <div class="movie-container">
+                <img class="" src="img/room2.jpg"/>
+                <div class="overlay" data-trailer-url="https://www.youtube.com/embed/E_Ci-pAL4eE">
+                  <h2 class="movie-title">Room</h2>
                   <i class="fa fa-play-circle play-button fa-5x" aria-hidden="true"></i>
                 </div>
               </div>
@@ -145,7 +202,7 @@
             <div class="col-xs-6">
               <div class="movie-container">
                 <img class="" src="img/45-years.jpg"/>
-                <div class="overlay">
+                <div class="overlay" data-trailer-url="https://www.youtube.com/embed/Tg5cpiX18TA">
                   <h2 class="movie-title">45 Years</h2>
                   <i class="fa fa-play-circle play-button fa-5x" aria-hidden="true"></i>
                 </div>
@@ -155,23 +212,35 @@
             <div class="col-xs-6">
               <div class="movie-container">
                 <img class="" src="img/tree-of-life.jpg"/>
-                <div class="overlay">
+                <div class="overlay" data-trailer-url="https://www.youtube.com/embed/RrAz1YLh8nY">
                   <h2 class="movie-title">Tree of Life</h2>
                   <i class="fa fa-play-circle play-button fa-5x" aria-hidden="true"></i>
                 </div>
               </div>
             </div>
           </div>
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="movie-container">
+                <img class="" src="img/kids.jpg"/>
+                <div class="overlay" data-trailer-url="https://www.youtube.com/embed/U9a5tZSKDOU">
+                  <h2 class="movie-title">Kids</h2>
+                  <i class="fa fa-play-circle play-button fa-5x" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+          </div>
 
         </section>
         <div class="clearfix"></div>
         <section id="about-section">
-          <h2>ABOUT THIS SITE HERE</h2>
-          <h4>Before you can build the house back up, you have to burn it to the ground. This site is a resource for classic and upcoming films of devastating emotional heft. It's easy for our brains to trick us into thinking our problems are the most important things that've ever happened. In times like this, the power of film can serve as a powerful reminder that we're all but specs of dust in an eternal sea of mystery. Suddenly, our puny issues don't seem quite so bad.</h4>
+          <h2>About This Site</h2>
+          <h4>Before you can rebuild the house, you have to burn it to the ground. This site is a resource for upcoming and classic films of devastating emotional heft. Sometimes it's easy to start thinking that our problems matter. In times like this, the power of film can serve as a reminder that we're all but specs of dust in this eternal sea. Suddenly, our issues might not seem quite so bad. The knowledge that untold scores who've come before have shared in the burden of life's mystery can be a reaffirmation of the strength of mankind to conquer all.</h4>
         </section>
         <section id="contact-section">
-          <h2>CONTACT THIS SITE HERE</h2>
-          <h4>email / maybe a form for submitting comments and suggestions</h4>
+          <h2>Contact</h2>
+          <h4></h4>
         </section>
       </div>
     </div>
@@ -185,8 +254,10 @@
   <!-- Plugin JavaScript -->
   <script src="js/jquery.easing.min.js"></script>
   <script src="js/jquery.fittext.js"></script>
+
   <!-- Custom JavaScript -->
   <script src="js/main.js"></script>
+
 
 </body>
 

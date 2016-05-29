@@ -79,6 +79,7 @@ button.navbar-toggle.collapsed { border: 1px solid black; }
 .nav-aside li a:hover {
   background-color: #999b9e;
 }
+.nav-highlight { background-color: #999b9e; }
 
 /* Featured image and image containers */
 .featured-container {
@@ -145,7 +146,8 @@ div.trailer-container {
   overflow: hidden;
   position: relative;
   text-align: center;
-  background: #42b078;
+
+
   margin-bottom: 15px;
 }
 .movie-container .overlay {
@@ -167,6 +169,9 @@ div.trailer-container {
 }
 .movie-container:hover {
   cursor: pointer;
+  background: #42b078;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
 }
 .movie-container:hover img {
   opacity: 0.4;
@@ -191,7 +196,7 @@ div.trailer-container {
   color: white;
 }
 .movie-container i.play-button {
-  color: gray;
+  color: rgba(0,0,0,0.4);
   position: absolute;
   left:50%;
   top:50%;
