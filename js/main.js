@@ -114,7 +114,7 @@ function offSetManager(){
 var sectionOffsets = {};
 $('section').each(function(){
   var key = $(this).attr('id');
-  var offset = ( $(this).offset().top - 250 )
+  var offset = ( $(this).offset().top - 73)
   sectionOffsets[$(this).attr('id')] = offset;
 })
 
