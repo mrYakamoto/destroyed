@@ -47,14 +47,14 @@
         </nav>
       </div>
     </div>
-    <div class="collapse navbar-collapse" id="collapse">
+    <div class="collapse navbar-collapse dropdown" id="collapse">
       <ul class="nav navbar-nav visible-xs text-center" id="collapse-ul">
-        <li><a href="#">Featured</a></li>
-        <li><a href="#">Coming Soon</a></li>
-        <li><a href="#">Available</a></li>
+        <li><a href="#" class="nav-link" data-linked-item="#featured-section">Featured</a></li>
+        <li><a href="#" class="nav-link" data-linked-item="#coming-soon-section">Coming Soon</a></li>
+        <li><a href="#" class="nav-link" data-linked-item="#past-section">Past</a></li>
         &nbsp;
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#" class="nav-link" data-linked-item="#about-section">About</a></li>
+        <li><a href="#" class="nav-link" data-linked-item="#contact-section">Contact</a></li>
       </ul>
     </div>
   </header>
@@ -62,7 +62,7 @@
   <div class="container-fluid">
     <div class="row">
       <aside class="col-sm-3 nav-aside">
-        <div class="collapse navbar-collapse" id="collapse">
+        <div class="collapse navbar-collapse" id="">
           <ul class="nav nav-pills nav-stacked hidden-xs">
             <li>
               <a href="#" class="nav-link" data-linked-item="#featured-section">Featured</a>
@@ -238,9 +238,28 @@
           <h2>About This Site</h2>
           <h4>Before you can rebuild the house, you have to burn it to the ground. This site is a resource for upcoming and classic films of devastating emotional heft. Sometimes it's easy to start thinking that our problems matter. In times like this, the power of film can serve as a reminder that we're all but specs of dust in this eternal sea. Suddenly, our issues might not seem quite so bad. The knowledge that untold scores who've come before have shared in the burden of life's mystery can be a reaffirmation of the strength of mankind to conquer all.</h4>
         </section>
-        <section id="contact-section">
+        <section id="contact-section" class="">
           <h2>Contact</h2>
-          <h4></h4>
+
+          <div class="col-md-5">
+            <form role="form">
+              <br style="clear:both">
+              <div class="form-group">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
+              </div>
+              <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
+            </form>
+          </div>
+
         </section>
       </div>
     </div>

@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   myNavBar.init(
-    [ "header", "header-container", "brand", "subtitle"]
+    [ "header", "header-container", "brand", "subtitle", "collapse"]
   );
 
   window.onscroll = function(e) {
