@@ -95,7 +95,9 @@ button.navbar-toggle.collapsed { border: 1px solid black; }
 .nav-aside li a:hover {
   background-color: #999b9e;
 }
-.nav-highlight { background-color: #999b9e; }
+.nav-highlight {
+  background-color: #999b9e;
+}
 
 /* Featured image and image containers */
 .featured-container {
