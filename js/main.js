@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   myNavBar.init(
-    [ "header", "header-container", "brand", "subtitle", "collapse"]
+    [ "header", "header-container", "brand", "subtitle", "collapse", "nav-aside"]
   );
 
   window.onscroll = function(e) {
@@ -12,16 +12,23 @@ $(document).ready(function(){
   initTrailers();
 
   scrollNavListener();
+  dropdownClickListener();
 });
 
 function scrollNavListener(){
   $('.nav-link').click(function(e){
     e.preventDefault();
 
-    var offsetY = $($(this).attr('data-linked-item')).offset().top - 100;
+    var offsetY = $($(this).attr('data-linked-item')).offset().top - 80;
     $('html, body').animate({
       scrollTop: offsetY
     }, 800 );
+  })
+}
+
+function dropdownClickListener(){
+  $('div.dropdown .nav-link').on('click', function(){
+    $('#dropdown-toggle').trigger('click');
   })
 }
 

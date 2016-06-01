@@ -1,5 +1,5 @@
 body {
-  padding-top: 140px;
+  padding-top: 125px;
   background-color: black;
 
 }
@@ -47,14 +47,17 @@ header.fixed-theme .navbar-brand {
 span.icon-bar { background-color: black ; }
 span.icon-bar
 button.navbar-toggle.collapsed { border: 1px solid black; }
-
+.navbar-brand {
+  font-family: 'IM Fell English', serif, 'Fjalla One',Helvetica,sans-serif;
+  font-style: italic;
+}
 .navbar-brand small {
   display:block;
   font-size:13px;
   padding-left: 60px;
   position: relative;
   top: -8px;
-  font-family: 'Fjalla One',Helvetica,sans-serif;
+  font-family: 'IM Fell English', serif, 'Fjalla One',Helvetica,sans-serif;
 }
 
 .navbar-brand small.fixed-theme {
@@ -81,8 +84,10 @@ button.navbar-toggle.collapsed { border: 1px solid black; }
   margin-top: 20px;
   padding-top: 20px;
   position: fixed;
-  padding-left: 50px;
+  padding-left: 45px;
   color: white;
+  height: 100%;
+  margin-left: 5px;
 }
 .nav-aside ul {
   padding-top: 20px;
@@ -95,11 +100,37 @@ button.navbar-toggle.collapsed { border: 1px solid black; }
 .nav-aside li a:hover {
   background-color: #999b9e;
 }
+.nav-aside.fixed-theme{
+  margin-top: -47px;
+}
+
 .nav-highlight {
   background-color: #999b9e;
 }
 
+.nav-link:hover {
+  background-color: #999b9e;
+}
+
 /* Featured image and image containers */
+
+#featured-section,
+#past-section {
+  background-image: url('../img/background/stars-purp.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+#coming-soon-section,
+#about-section,
+#contact-section {
+  background-image: url('../img/background/stars-green.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#featured-section { padding-top: 15px;}
+#contact-section { padding-bottom: 100px; }
+
 .featured-container {
   position: relative;
 }
@@ -128,6 +159,8 @@ button.navbar-toggle.collapsed { border: 1px solid black; }
 
 section h2,
 section h3 {
+  font-family: 'Fjalla One',Helvetica,sans-serif;
+  font-weight: 100;
   color: white;
 }
 section h4 {

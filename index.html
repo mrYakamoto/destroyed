@@ -9,12 +9,15 @@
   <meta name="author" content="">
 
   <title>Destroyed</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
   <!-- Custom Fonts -->
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=IM+Fell+English:400,400italic' rel='stylesheet' type='text/css'>
   <!-- Plugin CSS -->
   <link rel="stylesheet" href="css/animate.min.css" type="text/css">
   <!-- Custom CSS -->
@@ -37,7 +40,7 @@
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
           <div class="navbar-header">
             <span id="brand" class="navbar-brand" href="#">Destroyed <small id="subtitle">Films of crushing emotional weight</small></span>
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+            <button type="button" class="navbar-toggle" id="dropdown-toggle" data-toggle="collapse" data-target="#collapse">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -61,7 +64,7 @@
   <!--sidebar navigation-->
   <div class="container-fluid">
     <div class="row">
-      <aside class="col-sm-3 nav-aside">
+      <aside class="col-sm-3 nav-aside" id="nav-aside">
         <div class="collapse navbar-collapse" id="">
           <ul class="nav nav-pills nav-stacked hidden-xs">
             <li>
@@ -85,9 +88,9 @@
       </aside>
       <!-- main content -->
       <!-- featured movie -->
-      <div class="main-content-container col-xs-12 col-sm-9 col-sm-offset-3">
 
-        <section id="featured-section">
+
+        <section class ="col-xs-12 col-sm-9 col-sm-offset-3" id="featured-section">
           <h2>Featured</h2>
           <div class="row">
             <div class="col-xs-12">
@@ -103,8 +106,8 @@
         </section>
 
         <!-- upcoming films -->
-        <section id="coming-soon-section">
-          <h2>Coming Soon</h2>
+        <section class ="col-xs-12 col-sm-9 col-sm-offset-3" id="coming-soon-section">
+          <h2>New / Coming Soon</h2>
           <div class="row">
             <div class="col-xs-6">
               <div class="movie-container">
@@ -125,14 +128,35 @@
               </div>
             </div>
 
+            <div class="col-xs-6">
+              <div class="movie-container">
+                <img class="" src="img/the-club2.jpg"/>
+                <div class="overlay" data-trailer-url="https://www.youtube.com/embed/e8c2DYoF7lA">
+                  <h2 class="movie-title">The Club</h2>
+                  <i class="fa fa-play-circle play-button fa-5x" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-6">
+              <div class="movie-container">
+                <img class="" src="img/embrace-of-the-serpent2.jpg"/>
+                <div class="overlay" data-trailer-url="https://www.youtube.com/embed/4ff7TcnqHUc">
+                  <h2 class="movie-title">Embrace of the Serpent</h2>
+                  <i class="fa fa-play-circle play-button fa-5x" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
           </div>
 
+
+
         </section>
+        <div class="clearfix"></div>
+        <section class ="col-xs-12 col-sm-9 col-sm-offset-3" id="past-section">
+          <h2>Canon</h2>
 
-        <section id="past-section">
-          <h2>PAST</h2>
 
-          <div class="row">
             <div class="col-xs-6">
               <div class="movie-container">
                 <img class="" src="img/magnolia.jpg"/>
@@ -152,9 +176,9 @@
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="row">
+
+
             <div class="col-xs-6">
               <div class="movie-container">
                 <img class="" src="img/bicycle-thief2.jpg"/>
@@ -174,9 +198,7 @@
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="row">
             <div class="col-xs-6">
               <div class="movie-container">
                 <img class="" src="img/mask.jpg"/>
@@ -196,9 +218,7 @@
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="row">
             <div class="col-xs-6">
               <div class="movie-container">
                 <img class="" src="img/45-years.jpg"/>
@@ -218,8 +238,7 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row">
+
             <div class="col-xs-6">
               <div class="movie-container">
                 <img class="" src="img/kids.jpg"/>
@@ -232,13 +251,15 @@
 
           </div>
 
+
+
         </section>
         <div class="clearfix"></div>
-        <section id="about-section">
+        <section class ="col-xs-12 col-sm-9 col-sm-offset-3" id="about-section">
           <h2>About This Site</h2>
           <h4>Before you can rebuild the house, you have to burn it to the ground. This site is a resource for upcoming and classic films of devastating emotional heft. Sometimes it's easy to start thinking that our problems matter. In times like this, the power of film can serve as a reminder that we're all but specs of dust in this eternal sea. Suddenly, our issues might not seem quite so bad. The knowledge that untold scores who've come before have shared in the burden of life's mystery can be a reaffirmation of the strength of mankind to conquer all.</h4>
         </section>
-        <section id="contact-section" class="">
+        <section class ="col-xs-12 col-sm-9 col-sm-offset-3" id="contact-section" class="">
           <h2>Contact</h2>
 
           <div class="col-md-5">
@@ -263,8 +284,6 @@
         </section>
       </div>
     </div>
-  </div>
-  <div style="height:2000px;"></div>
 
   <!-- jQuery -->
   <script src="js/jquery.js"></script>
