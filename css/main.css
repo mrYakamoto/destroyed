@@ -31,7 +31,10 @@ header.fixed-theme .navbar-brand {
   box-shadow: 0 0 5px rgba(0,0,0,.8);
 }
 
-.navbar-brand.fixed-theme { font-size: 18px; }
+.navbar-brand.fixed-theme {
+  font-size: 18px;
+  color: #FFF;
+}
 
 .navbar-container.fixed-theme { padding: 0; }
 
@@ -58,10 +61,12 @@ button.navbar-toggle.collapsed { border: 1px solid black; }
   position: relative;
   top: -8px;
   font-family: 'IM Fell English', serif, 'Fjalla One',Helvetica,sans-serif;
+  color: black;
 }
 
 .navbar-brand small.fixed-theme {
   top: 0;
+  color: #FFF;
 }
 
 .dropdown {
