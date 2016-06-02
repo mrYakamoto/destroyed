@@ -7,12 +7,16 @@ $(document).ready(function(){
   window.onscroll = function(e) {
     offSetManager();
   }
+  window.onload = function(){
+  getOffSetValues();
+}
 
   $(".movie-title").fitText();
   initTrailers();
 
   scrollNavListener();
   dropdownClickListener();
+
 });
 
 function scrollNavListener(){
@@ -46,6 +50,7 @@ function openTrailerButtonListener(){
     escapeButtonListener();
   })
 }
+
 function closeTrailerButtonListener(){
   $('#close-trailer-icon').click(function(e){
     e.preventDefault();
@@ -53,6 +58,7 @@ function closeTrailerButtonListener(){
     emptyTrailerWindow();
   })
 }
+
 function escapeButtonListener(){
   $(document).keyup(function(e) {
      if (e.keyCode == 27) {
@@ -74,7 +80,6 @@ function populateTrailerWindow(url){
 function emptyTrailerWindow(){
   $('#trailer-iframe').attr('src', '');
 }
-
 
 var myNavBar = {
   flagAdd: true,
@@ -103,7 +108,6 @@ var myNavBar = {
 
 };
 
-
 function offSetManager(){
   var yOffset = 0;
   var currYOffSet = window.pageYOffset;
@@ -117,13 +121,15 @@ function offSetManager(){
   }
 }
 
-
-var sectionOffsets = {};
-$('section').each(function(){
-  var key = $(this).attr('id');
-  var offset = ( $(this).offset().top - 120)
-  sectionOffsets[$(this).attr('id')] = offset;
-})
+function getOffSetValues(){
+  sectionOffsets = {};
+  $('section').each(function(){
+    var key = $(this).attr('id');
+    var offset = ( $(this).offset().top - 120)
+    sectionOffsets[$(this).attr('id')] = offset;
+  })
+  return;
+}
 
 function navHighlighter(){
   var currYOffSet = window.pageYOffset;
@@ -143,7 +149,6 @@ function navHighlighter(){
 }
 
 function highlight(sectionName){
-
   var itemName = "a[data-linked-item='#" + sectionName + "']"
   $('.nav-link').removeClass('nav-highlight');
   $(itemName).addClass('nav-highlight');
